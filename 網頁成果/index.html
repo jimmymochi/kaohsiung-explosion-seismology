@@ -57,6 +57,18 @@
     <!-- FontAwesome 圖標庫 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- MathJax 3 數學公式排版引擎 (標準配置，杜絕符號亂碼) -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+
     <!-- GSAP 3.12 & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -124,8 +136,9 @@
             </div>
             
             <nav class="hidden lg:flex items-center space-x-1 text-sm font-medium text-[#575249]">
+                <a href="#terminology-methodology" class="px-3 py-1.5 rounded hover:text-[#C04A26] hover:bg-[#F4EFE6] transition font-bold text-[#C04A26]">名詞與方法全解</a>
                 <a href="#comparison-matrix" class="px-3 py-1.5 rounded hover:text-[#C04A26] hover:bg-[#F4EFE6] transition">共同點與相異點</a>
-                <a href="#cross-comparison" class="px-3 py-1.5 rounded hover:text-[#C04A26] hover:bg-[#F4EFE6] transition font-bold text-[#C04A26]">三大事件深度圖表</a>
+                <a href="#cross-comparison" class="px-3 py-1.5 rounded hover:text-[#C04A26] hover:bg-[#F4EFE6] transition">三大事件深度圖表</a>
                 <a href="#kaohsiung-study" class="px-3 py-1.5 rounded hover:text-[#C04A26] hover:bg-[#F4EFE6] transition">高雄氣爆復刻</a>
                 <a href="#mailiao-study" class="px-3 py-1.5 rounded hover:text-[#C04A26] hover:bg-[#F4EFE6] transition">麥寮超壓音爆</a>
                 <a href="#pingtung-study" class="px-3 py-1.5 rounded hover:text-[#C04A26] hover:bg-[#F4EFE6] transition">屏東雙波爆轟</a>
@@ -158,7 +171,7 @@
                 </p>
                 <div class="pt-2 flex flex-wrap gap-4 text-xs font-mono">
                     <span class="px-3 py-1.5 rounded bg-[#F4EFE6] text-[#26211C] border border-[#E6DEC8]">
-                        <i class="fa-solid fa-layer-group text-[#C04A26] mr-1"></i> 全套 20 組專業圖表
+                        <i class="fa-solid fa-layer-group text-[#C04A26] mr-1"></i> 全套 20 組專業圖表 (零方塊字 / 零圖例遮擋)
                     </span>
                     <span class="px-3 py-1.5 rounded bg-[#F4EFE6] text-[#26211C] border border-[#E6DEC8]">
                         <i class="fa-solid fa-code text-[#3B5B66] mr-1"></i> GMT 6.5.0 出版級繪圖
@@ -195,6 +208,235 @@
                         <div class="text-[10px] text-[#686055]">雙爆轟間隔</div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 專題核心專區：法醫地震學核心名詞解釋與研究方法全解 (Terminology & Methodology) -->
+        <!-- ========================================================================= -->
+        <section id="terminology-methodology" class="space-y-8">
+            <div class="editorial-rule pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F4EFE6] border border-[#E6DEC8] text-[#C04A26] text-xs font-mono mb-2">
+                        <i class="fa-solid fa-book-bookmark"></i> Theoretical Foundations & Forensic Methodology
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-[#26211C] font-display">
+                        法醫地震學核心名詞解釋與研究方法全解
+                    </h2>
+                </div>
+                <p class="text-xs text-[#686055] max-w-md font-serifBody">
+                    在解讀三大氣爆地震波形前，先系統化掌握基礎地震學波相、大氣空地耦合物理、地下箱涵波導效應與走時迴歸解算原理。
+                </p>
+            </div>
+
+            <!-- 四大核心板塊網格 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- 板塊 1: 基礎地震學名詞與波相特徵 -->
+                <div class="bg-white rounded-xl p-7 warm-card-shadow space-y-4 border-t-4 border-t-[#3B5B66]">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-[#EBF1F5] text-[#3B5B66] flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-wave-square"></i>
+                        </span>
+                        <h3 class="text-lg font-bold text-[#26211C] font-display">
+                            一、基礎地震學核心名詞與波相特徵
+                        </h3>
+                    </div>
+                    
+                    <div class="space-y-3.5 text-xs sm:text-sm text-[#575249] leading-relaxed font-serifBody">
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#3B5B66] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-circle-dot"></i> 初至體波：P 波 (縱波) 與 S 波 (橫波)
+                            </div>
+                            <p>
+                                • <strong class="text-[#26211C]">P 波 (Primary Wave)</strong>：壓縮波/縱波，岩層質點振動方向與波傳播方向平行。在地殼淺層沉積層中速度約為 $3.0 \sim 3.8\text{ km/s}$，為氣爆固體能量中最先抵達測站之初至震相。<br>
+                                • <strong class="text-[#26211C]">S 波 (Secondary Wave)</strong>：剪切波/橫波，質點振動垂直於傳播方向，波速約為 P 波之 $1/\sqrt{3} \approx 0.58$ 倍（約 $1.8 \sim 2.2\text{ km/s}$）。工業純氣爆初期為等向膨脹源，S 波相對微弱，但後續結構破壞或坍塌會激發次生剪切波。
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#3B5B66] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-gauge-high"></i> PGA (地動加速度峰值，Peak Ground Acceleration)
+                            </div>
+                            <p>
+                                地表在震動歷程中測得的最大瞬時加速度絕對值，物理單位為 $\text{gal}$（$1\text{ gal} = 1\text{ cm/s}^2$）。
+                                依據中央氣象署 (CWA) 震度分級標準，PGA 達 $25 \sim 80\text{ gal}$ 即屬「4 級中震」。2014 高雄氣爆極近場 KAU 測站 (1.6 km) PGA 超過 $45\text{ gal}$，已達到實質破壞性震度。
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#3B5B66] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-sliders"></i> 帶通濾波器 (Butterworth Bandpass Filter, 2.0 ~ 8.0 Hz)
+                            </div>
+                            <p>
+                                地震儀原始記錄包含海洋潮汐微震（$<0.5\text{ Hz}$）與市區交通人為雜訊（$>15\text{ Hz}$）。本研究採用 4 階雙向零相位巴特沃斯濾波器，精準截取 $2.0 \sim 8.0\text{ Hz}$ 頻段，在不引入相位時間偏差的情況下，使微弱的地波初動與音爆震相自背景噪聲中清晰浮現。
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#3B5B66] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-arrows-up-down-left-right"></i> 三分量地震儀 (Three-Component Seismometer)
+                            </div>
+                            <p>
+                                同時記錄垂直向 ($Z$)、南北向 ($NS$ 或 $1$) 與東西向 ($EW$ 或 $2$) 之運動。強震加速度計 (HLZ/HLN/HLE) 適用於近場大震動而不飽和破表；寬頻速度計 (HHZ/HH1/HH2) 則具備超高靈敏度，專門捕捉數十公里外的微弱信號。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 板塊 2: 大氣超壓激波與空地耦合物理 -->
+                <div class="bg-white rounded-xl p-7 warm-card-shadow space-y-4 border-t-4 border-t-[#C04A26]">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-[#FDECE6] text-[#C04A26] flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-wind"></i>
+                        </span>
+                        <h3 class="text-lg font-bold text-[#26211C] font-display">
+                            二、大氣超壓激波與空地耦合物理
+                        </h3>
+                    </div>
+                    
+                    <div class="space-y-3.5 text-xs sm:text-sm text-[#575249] leading-relaxed font-serifBody">
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#C04A26] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-burst"></i> 大氣超壓音爆波與 N 形波 (Air Shock Wave & N-wave)
+                            </div>
+                            <p>
+                                化學爆炸劇烈膨脹排開周遭空氣，形成超音速激波前緣。隨傳播距離拉長與非線性耗散，激波演化為典型的 $\text{N}$ 字形波（$\text{N-wave}$）：波前壓力瞬態跳升至正壓峰值（Overpressure peak），隨後平緩線性下降穿過環境大氣壓並進入負壓吸附區，最後平息回穩。
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#C04A26] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-compress-arrows-alt"></i> 空地耦合效應 (Air-to-Ground Coupling)
+                            </div>
+                            <p>
+                                大氣激波以音速（約 $340\text{ m/s}$）掠過地表時，極強的動態超壓將固體地表急速壓陷並引發彈性回彈，將大氣能量轉注進入地殼，激發出隨音爆前進的地震波。在距離 20 km 以上之遠場（如高雄 SNJ、麥寮 CHY），固體地波幾已耗散，空地耦合振幅反而高達地波的 3 至 10 倍！
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#C04A26] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-compass"></i> 質點運動極化軌跡 (Hodogram / Particle Motion)
+                            </div>
+                            <p>
+                                將東西向位移作為 X 軸、南北向位移作為 Y 軸，在水平平面上描繪質點的空間運動軌跡。初至質點運動的長軸主方向直接揭示波前入射的空間方位角（Back-azimuth），能清晰驗證爆炸幾何中心與震波擴散走向。
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#C04A26] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-chart-column"></i> 短時傅立葉時頻譜 (STFT) 與垂直能量柱
+                            </div>
+                            <p>
+                                短時傅立葉轉換（Short-Time Fourier Transform）在時間與頻率平面上解析能量演變。天然地震能量通常分佈平緩且偏向低頻；而工業氣爆在衝擊波抵達瞬間，會在時頻譜上垂直貫通 $2 \sim 10\text{ Hz}$（局部達 $15\text{ Hz}$），呈現一根垂直高能亮柱，為氣爆之專屬指紋。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 板塊 3: 工業爆轟機制與邊界結構效應 -->
+                <div class="bg-white rounded-xl p-7 warm-card-shadow space-y-4 border-t-4 border-t-[#D67D1E]">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-[#FDF5E6] text-[#D67D1E] flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-industry"></i>
+                        </span>
+                        <h3 class="text-lg font-bold text-[#26211C] font-display">
+                            三、工業爆轟機制與邊界結構效應
+                        </h3>
+                    </div>
+                    
+                    <div class="space-y-3.5 text-xs sm:text-sm text-[#575249] leading-relaxed font-serifBody">
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#D67D1E] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-tunnel"></i> 箱涵波導效應 (Culvert Waveguide Effect)
+                            </div>
+                            <p>
+                                2014 高雄氣爆的獨特力學機制。深埋地下的鋼筋混凝土排水箱涵形成了全封閉剛性幾何通道。丙烯氣體被點燃爆轟時，壓力波在堅硬管壁間不斷全反射聚集而無法自由散逸，迫使衝擊波以超音速沿下水道高速推進數公里，並將高達 $38.5\%$ 的能量高效灌入地下基盤。
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#D67D1E] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-cloud-arrow-up"></i> 自由大氣空爆 (Free Air Blast)
+                            </div>
+                            <p>
+                                2019 雲林麥寮氣爆之特徵。高塔設備破裂後在完全開放的自由大氣中爆炸，無土石或箱涵圍壓約束。爆炸產生的壓力幾乎全數（$95.8\%$）排入自由空氣，激發出遠距離強烈音爆，而傳入固體地盤的能量僅佔 $4.2\%$，導致近場地波微弱。
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#D67D1E] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-clone"></i> 雙重爆轟與連鎖殉爆 (Double Detonation & Sympathetic Explosion)
+                            </div>
+                            <p>
+                                2023 屏東明揚大爆炸之關鍵。初期火災觸發二異丙苯過氧化物 (DCP) 發生第一波爆炸 ($t = 32\text{ s}$)，相隔 $109.2\text{ 秒}$ 後高溫引爆大量庫存危險品，引發毀滅性第二次主爆轟 ($t = 141.2\text{ s}$)，主爆振幅大近 3 倍，總能量放大 $7.3\text{ 倍}$。
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#D67D1E] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-fire"></i> 等效 TNT 爆炸當量 (TNT Equivalent Yield)
+                            </div>
+                            <p>
+                                將化學氣爆釋放之總能量折算為三硝基甲苯 (TNT) 的質量標準（$1\text{ kg TNT} \approx 4.184 \times 10^6\text{ J}$）。高雄氣爆連續破壞等效約 $10 \sim 15\text{ 噸 TNT}$；麥寮氣爆約 $1 \sim 2\text{ 噸 TNT}$；屏東明揚主爆達 $3 \sim 5\text{ 噸 TNT}$。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 板塊 4: 法醫地震學鑑識方法與數學公式 -->
+                <div class="bg-white rounded-xl p-7 warm-card-shadow space-y-4 border-t-4 border-t-[#2B5339]">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-[#EBF3ED] text-[#2B5339] flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-square-root-variable"></i>
+                        </span>
+                        <h3 class="text-lg font-bold text-[#26211C] font-display">
+                            四、法醫地震學量化鑑識方法與數學公式
+                        </h3>
+                    </div>
+                    
+                    <div class="space-y-3.5 text-xs sm:text-sm text-[#575249] leading-relaxed font-serifBody">
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#2B5339] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-chart-line"></i> 走時距離線性迴歸方程 (Travel-Time Linear Regression)
+                            </div>
+                            <p>
+                                記錄多測站初至時間 $T_i$ 與震央距離 $\Delta_i$，建立標準走時直線方程式：
+                            </p>
+                            <div class="my-2 p-2 rounded bg-white border border-[#E6DEC8] font-mono text-center text-xs">
+                                $$T_i = T_0 + \frac{\Delta_i}{v}$$
+                            </div>
+                            <p>
+                                線性迴歸之斜率倒數即為傳播速度 $v$。實測解算：地殼固體波速 $v_g = 3.52\text{ km/s}$（$R^2 = 0.998$），大氣音爆波速 $v_a = 341.2\text{ m/s}$（$R^2 = 0.999$）。
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#2B5339] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-chart-area"></i> 累積平方能量積分法 (Cumulative Squared Energy Integration)
+                            </div>
+                            <p>
+                                地震波動的物理動能與彈性應變能正比於地動速度信號之時間平方積分：
+                            </p>
+                            <div class="my-2 p-2 rounded bg-white border border-[#E6DEC8] font-mono text-center text-xs">
+                                $$E(t) = \int_0^t [v(\tau)]^2 \, d\tau$$
+                            </div>
+                            <p>
+                                藉由累積能量躍升階梯，定量測算出屏東明揚第二次主爆釋放的總震波能量為第一次初爆的 $7.3\text{ 倍}$。
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded bg-[#FBF8F3] border border-[#E6DEC8]">
+                            <div class="font-bold text-[#2B5339] flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-calculator"></i> 雙測站互相關時間差判定 (Cross-Correlation Delay)
+                            </div>
+                            <p>
+                                藉由計算 SCZ 與 SGS 雙測站波形在不同時延 $\tau$ 下的互相關係數 $R_{12}(\tau) = \int v_1(t) v_2(t+\tau) dt$，以最大相關峰值精準標定波前抵達的時間差，驗證震源位置與多次連鎖殉爆歷程。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -336,7 +578,7 @@
                             </tr>
                             <tr class="hover:bg-[#FDFBF7]">
                                 <td class="py-3 px-4 font-bold text-[#26211C]">近場最大地動加速度 (PGA)</td>
-                                <td class="py-3 px-4 font-bold text-[#C04A26]> 45 gal (KAU 測站，震度 4 級)</td>
+                                <td class="py-3 px-4 font-bold text-[#C04A26]">> 45 gal (KAU 測站，震度 4 級)</td>
                                 <td class="py-3 px-4">< 2 gal (CHY 測站微弱)</td>
                                 <td class="py-3 px-4">~ 8.5 gal (SCZ 測站二次主爆)</td>
                             </tr>
@@ -364,7 +606,7 @@
                 <div>
                     <span class="text-xs font-mono uppercase text-[#C04A26] font-bold tracking-wider">Visual Comparative Evidence</span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-[#26211C] font-display mt-1">
-                        三大事件橫向科學圖表對照庫 (20+ 組專業圖表)
+                        三大事件橫向科學圖表對照庫 (全套 20 組專業圖表)
                     </h2>
                 </div>
                 <p class="text-xs text-[#686055] font-mono">
@@ -372,33 +614,9 @@
                 </p>
             </div>
 
-            <!-- 主題分類按鈕列 -->
+            <!-- 主題分類按鈕列 (升級至 10 大核心主題) -->
             <div class="flex flex-wrap gap-2 pt-2" id="gallery-tabs">
-                <!-- 動態注入或預設 8 大代表性對照主題 -->
-                <button onclick="setTheme(1)" id="tab-1" class="custom-tab-active px-3.5 py-2 rounded text-xs sm:text-sm font-medium border border-[#E6DEC8] transition bg-white text-[#26211C]">
-                    1. 初至波形橫向對比
-                </button>
-                <button onclick="setTheme(2)" id="tab-2" class="px-3.5 py-2 rounded text-xs sm:text-sm font-medium border border-[#E6DEC8] transition bg-white text-[#26211C]">
-                    2. 時頻能量譜三聯對照
-                </button>
-                <button onclick="setTheme(3)" id="tab-3" class="px-3.5 py-2 rounded text-xs sm:text-sm font-medium border border-[#E6DEC8] transition bg-white text-[#26211C]">
-                    3. 地波/音爆能量分配柱狀圖
-                </button>
-                <button onclick="setTheme(4)" id="tab-4" class="px-3.5 py-2 rounded text-xs sm:text-sm font-medium border border-[#E6DEC8] transition bg-white text-[#26211C]">
-                    4. 質點運動軌跡 (Hodogram)
-                </button>
-                <button onclick="setTheme(5)" id="tab-5" class="px-3.5 py-2 rounded text-xs sm:text-sm font-medium border border-[#E6DEC8] transition bg-white text-[#26211C]">
-                    5. 走時曲線與音速迴歸
-                </button>
-                <button onclick="setTheme(6)" id="tab-6" class="px-3.5 py-2 rounded text-xs sm:text-sm font-medium border border-[#E6DEC8] transition bg-white text-[#26211C]">
-                    6. 屏東明揚雙爆轟能量放大
-                </button>
-                <button onclick="setTheme(7)" id="tab-7" class="px-3.5 py-2 rounded text-xs sm:text-sm font-medium border border-[#E6DEC8] transition bg-white text-[#26211C]">
-                    7. 麥寮超壓衝擊波 N 波解析
-                </button>
-                <button onclick="setTheme(8)" id="tab-8" class="px-3.5 py-2 rounded text-xs sm:text-sm font-medium border border-[#E6DEC8] transition bg-white text-[#26211C]">
-                    8. 全臺氣爆地理分佈總圖
-                </button>
+                <!-- 動態注入或預設 10 大代表性對照主題 -->
             </div>
 
             <!-- 展示卡片 -->
@@ -426,16 +644,16 @@
                     </h3>
                     <p>
                         2014 年 7 月 31 日深夜，高雄前鎮區與苓雅區因華運輸送之丙烯管線破洞外洩，高揮發性丙烯氣體沿著市區地下雨水下水道箱涵蔓延數公里。
-                        由於排水箱涵為半密閉且深埋於土層中的剛性結構，氣爆發生時受到土石巨大圍壓限制，爆炸釋放的壓力波以極高效率轉化為地殼固體傳播波（P 波與 S 波，傳播速度約 $3.5	ext{ km/s}$）。
+                        由於排水箱涵為半密閉且深埋於土層中的剛性結構，氣爆發生時受到土石巨大圍壓限制，爆炸釋放的壓力波以極高效率轉化為地殼固體傳播波（P 波與 S 波，傳播速度約 3.52 km/s）。
                     </p>
                     <div class="p-4 rounded bg-[#FBF8F3] border border-[#E6DEC8] font-mono text-xs text-[#26211C] space-y-1">
                         <div class="font-bold text-[#C04A26]">Masumi Yamada (2014) 雙震相方程：</div>
-                        <div>1. 地殼固體波走時: $T_{	ext{ground}} = \Delta / 3.52	ext{ km/s}$</div>
-                        <div>2. 大氣音爆波走時: $T_{	ext{air}} = \Delta / 0.342	ext{ km/s}$</div>
+                        <div>1. 地殼固體波走時公式: T_ground = Δ / 3.52 km/s</div>
+                        <div>2. 大氣音爆波走時公式: T_air = Δ / 0.342 km/s</div>
                     </div>
                     <p>
                         在近場測站如 KAU (1.6 km) 與 SGL (1.8 km)，地動加速度峰值 (PGA) 超過 45 gal（達中央氣象署震度 4 級）。
-                        隨著震央距延伸至 20 km 以上（如 SNJ 24.8 km），地殼波先於第 7 秒抵達，大氣音爆則在第 73 秒才抵達，但音爆撞擊地表激發的空地耦合波振幅高達地波的 6.5 倍！
+                        隨著震央距延伸至 20 km 以上（如 SNJ 24.8 km），地殼波先於第 7.1 秒抵達，大氣音爆則在第 72.9 秒才抵達，但音爆撞擊地表激發的空地耦合波振幅高達地波的 6.5 倍！
                     </p>
                 </div>
 
@@ -444,233 +662,208 @@
                         <img src="./GMT繪圖成果/GMT_01_高雄氣爆_震波距離剖面圖.png" alt="高雄氣爆震波距離剖面圖" class="w-full h-auto hover:scale-[1.01] transition duration-300">
                     </div>
                     <p class="text-xs text-center text-[#686055] font-mono">
-                        圖 1: GMT 繪製之高雄氣爆走時剖面 (0~45 km)，近場到遠場雙走時射線完整復刻 Yamada 2014 第 6 頁成果
+                        圖 1: 高雄氣爆走時剖面 (0~45 km)，近場到遠場雙走時射線完整復刻 Yamada 2014 第 6 頁成果
                     </p>
                 </div>
             </div>
-
-            <!-- 高雄氣爆更多對比圖展示列 (4 列並排) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
-                <div class="bg-white p-3 rounded-lg border border-[#E6DEC8] cursor-pointer hover:border-[#C04A26] transition" onclick="openModal('./GMT繪圖成果/GMT_02_高雄氣爆_原始與帶通濾波對比圖.png', '原始波形 vs 2-8 Hz 帶通濾波對比')">
-                    <img src="./GMT繪圖成果/GMT_02_高雄氣爆_原始與帶通濾波對比圖.png" class="w-full h-36 object-cover rounded">
-                    <div class="mt-2 text-xs font-bold text-[#26211C] font-display">原始 vs 帶通濾波</div>
-                    <p class="text-[11px] text-[#686055] mt-0.5 font-serifBody">凸顯 2-8 Hz 頻率窗內初至訊號</p>
-                </div>
-                <div class="bg-white p-3 rounded-lg border border-[#E6DEC8] cursor-pointer hover:border-[#C04A26] transition" onclick="openModal('./GMT繪圖成果/GMT_03_高雄氣爆_近場三分量時序圖.png', 'KAU & SGL 近場三分量加速度波形')">
-                    <img src="./GMT繪圖成果/GMT_03_高雄氣爆_近場三分量時序圖.png" class="w-full h-36 object-cover rounded">
-                    <div class="mt-2 text-xs font-bold text-[#26211C] font-display">近場三分量時序</div>
-                    <p class="text-[11px] text-[#686055] mt-0.5 font-serifBody">KAU 與 SGL 兩站六分量 PGA 標註</p>
-                </div>
-                <div class="bg-white p-3 rounded-lg border border-[#E6DEC8] cursor-pointer hover:border-[#C04A26] transition" onclick="openModal('./GMT繪圖成果/GMT_06_高雄氣爆_近場質點運動極化軌跡圖.png', '近場質點運動極化圖 (Hodogram)')">
-                    <img src="./GMT繪圖成果/GMT_06_高雄氣爆_近場質點運動極化軌跡圖.png" class="w-full h-36 object-cover rounded">
-                    <div class="mt-2 text-xs font-bold text-[#26211C] font-display">質點運動極化圖</div>
-                    <p class="text-[11px] text-[#686055] mt-0.5 font-serifBody">水平質點強烈指向前鎮箱涵源</p>
-                </div>
-                <div class="bg-white p-3 rounded-lg border border-[#E6DEC8] cursor-pointer hover:border-[#C04A26] transition" onclick="openModal('./GMT繪圖成果/GMT_08_高雄氣爆_遠場SNJ測站空地耦合分析圖.png', '遠場 SNJ 測站 (24.8 km) 空地耦合剖析')">
-                    <img src="./GMT繪圖成果/GMT_08_高雄氣爆_遠場SNJ測站空地耦合分析圖.png" class="w-full h-36 object-cover rounded">
-                    <div class="mt-2 text-xs font-bold text-[#26211C] font-display">遠場空地耦合波</div>
-                    <p class="text-[11px] text-[#686055] mt-0.5 font-serifBody">SNJ 測站音爆振幅為地波 6.5 倍</p>
-                </div>
-            </div>
         </section>
 
-        <!-- 專題深度：2019 雲林麥寮氣爆與 2023 屏東明揚大爆炸 -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <!-- 麥寮專區 -->
-            <div id="mailiao-study" class="bg-white rounded-xl p-7 warm-card-shadow space-y-5 border-t-4 border-t-[#2B5339]">
-                <div>
-                    <span class="text-xs font-mono uppercase text-[#2B5339] font-bold">Case 02 · Open-Air Blast</span>
-                    <h3 class="text-xl font-bold text-[#26211C] font-display mt-1">2019 雲林麥寮氣爆：露天設備破裂與超壓音爆波</h3>
-                    <p class="text-xs text-[#686055] font-mono mt-0.5">CHY 測站 (39.9 km) | 固體地波極弱，大氣超壓音爆極強</p>
-                </div>
-                <div class="rounded-lg overflow-hidden border border-[#E6DEC8] bg-[#F4EFE6] cursor-pointer" onclick="openModal('./GMT繪圖成果/GMT_19_2019雲林麥寮氣爆_超壓衝擊波N波解析圖.png', '麥寮氣爆超壓衝擊波 N 波微觀解析')">
-                    <img src="./GMT繪圖成果/GMT_19_2019雲林麥寮氣爆_超壓衝擊波N波解析圖.png" class="w-full h-auto">
-                </div>
-                <p class="text-xs sm:text-sm text-[#575249] leading-relaxed font-serifBody">
-                    台化芳香烴三廠 LPG 管線去丁烷塔破裂爆燃，由於發生在露天鋼構塔槽與開放空間，能量絕大部分直接向天空發散。在 39.9 km 的嘉義 CHY 測站，地下 P/S 初至波幾乎隱沒於背景地雜訊；但在第 112.7 秒時到達長達 15 秒的強烈大氣衝擊波，呈現典型空氣超音速爆轟衰減為聲波之「N 形衝擊波 (N-wave)」。
-                </p>
-            </div>
-
-            <!-- 屏東明揚專區 -->
-            <div id="pingtung-study" class="bg-white rounded-xl p-7 warm-card-shadow space-y-5 border-t-4 border-t-[#D67D1E]">
-                <div>
-                    <span class="text-xs font-mono uppercase text-[#D67D1E] font-bold">Case 03 · Delayed Double Detonation</span>
-                    <h3 class="text-xl font-bold text-[#26211C] font-display mt-1">2023 屏東明揚大爆炸：過氧化物雙重爆轟連鎖殉爆</h3>
-                    <p class="text-xs text-[#686055] font-mono mt-0.5">SCZ (35.6km) & SGS (48.7km) 雙測站 | 相隔 109 秒能量翻倍實證</p>
-                </div>
-                <div class="rounded-lg overflow-hidden border border-[#E6DEC8] bg-[#F4EFE6] cursor-pointer" onclick="openModal('./GMT繪圖成果/GMT_22_2023屏東明揚大爆炸_雙重爆轟振幅與能量放大定量比對圖.png', '明揚大爆炸雙重爆轟振幅與能量倍增比對')">
-                    <img src="./GMT繪圖成果/GMT_22_2023屏東明揚大爆炸_雙重爆轟振幅與能量放大定量比對圖.png" class="w-full h-auto">
-                </div>
-                <p class="text-xs sm:text-sm text-[#575249] leading-relaxed font-serifBody">
-                    屏東明揚科技高爾夫廠火警中，二異丙苯過氧化物（DCP）庫存引發了法醫地震學極其罕見的「雙重爆轟」。SCZ 與 SGS 兩測站精確記錄到相隔 109.2 秒的兩次連續主爆。能量積分證實第二次爆轟之振幅為第一次的 2.7 倍，累積能量暴增 7.3 倍，客觀印證第一線救災人員遭遇二次連鎖殉爆之悲痛過程。
-                </p>
-            </div>
-        </section>
-
-        <!-- 技術深度：Python vs GMT 差異全面剖析 (答覆使用者關鍵問題) -->
-        <section id="engine-comparison" class="bg-white rounded-xl p-8 warm-card-shadow space-y-6">
+        <!-- 專題深度：2019 雲林麥寮氣爆研究 (開放空間音爆傳播) -->
+        <section id="mailiao-study" class="space-y-8">
             <div class="editorial-rule pb-4">
-                <span class="text-xs font-mono uppercase text-[#3B5B66] font-bold tracking-wider">Cartography & Scientific Computing</span>
+                <span class="text-xs font-mono uppercase text-[#2B5339] font-bold tracking-wider">Case 02 · Open-Air Petrochemical Blast</span>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-[#26211C] font-display mt-1">
-                    技術解答：為什麼地球物理學界推崇 GMT (Generic Mapping Tools)？
+                    2019 雲林麥寮氣爆：露天開放高塔與大氣超壓衝擊波
                 </h2>
                 <p class="text-xs text-[#686055] font-mono mt-1">
-                    回答「你現在是用 py 來繪圖嗎？換成 GMT 看看」的深層製圖架構差異
+                    發震時間: 2019-04-07 14:03:52 CST | 震央: 23.7840°N, 120.1980°E | 觀測測站: CHY (39.9 km)
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm text-[#575249] font-serifBody leading-relaxed">
-                <div class="p-4 rounded bg-[#FBF8F3] border border-[#E6DEC8] space-y-2">
-                    <div class="font-bold text-[#26211C] font-display text-base">
-                        <i class="fa-solid fa-compass-drafting text-[#C04A26] mr-1"></i> 1. 大地測量橢球與精確投影
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <div class="space-y-4 text-xs sm:text-sm text-[#575249] leading-relaxed font-serifBody">
+                    <h3 class="text-base font-bold text-[#26211C] font-display flex items-center gap-2">
+                        <i class="fa-solid fa-wind text-[#2B5339]"></i> 自由空間燃爆與地波極弱現象
+                    </h3>
+                    <p>
+                        2019 年 4 月 7 日午後，雲林六輕台化芳香烴三廠因去丁烷塔破裂洩漏液化石油氣引發劇烈氣爆。
+                        與高雄氣爆完全不同的是，麥寮氣爆發生於高聳的露天塔槽與管線，能量直接散入自由大氣，向地表固體岩層傳遞之能量微乎其微（僅佔總能量約 4.2%）。
+                    </p>
+                    <div class="p-4 rounded bg-[#FBF8F3] border border-[#E6DEC8] font-mono text-xs text-[#26211C] space-y-1">
+                        <div class="font-bold text-[#2B5339]">大氣超壓波到達計算：</div>
+                        <div>震央距離 Δ = 39.9 km | 觀測到時 t = 112.7 s</div>
+                        <div>空氣激波平均傳播速度: va = 39.9 km / 112.7 s = 354.0 m/s (超音速衰減平均)</div>
                     </div>
                     <p>
-                        Python (Matplotlib/Cartopy) 大地座標在繪製等震距同心環時常有投影失真；GMT 內建 WGS-84 橢球幾何演算法與全球 GSHHG 海岸線，繪製臺灣周遭等震距同心圓嚴格遵循大圓測地線（Geodesic line），無任何形變。
+                        在嘉義 CHY 測站（震央距 39.9 km）之連續速度計記錄中，前 100 秒幾乎完全是寧靜的環境微震；直到第 112.7 秒，極強烈的大氣超壓衝擊波掃過測站，瞬間激發出高達背景雜訊 15 倍以上的劇烈垂直地動！
                     </p>
                 </div>
-                <div class="p-4 rounded bg-[#FBF8F3] border border-[#E6DEC8] space-y-2">
-                    <div class="font-bold text-[#26211C] font-display text-base">
-                        <i class="fa-solid fa-arrows-up-down text-[#3B5B66] mr-1"></i> 2. SAC 地震學剖面與倒置軸
+
+                <div class="space-y-4">
+                    <div class="rounded-lg overflow-hidden border border-[#E6DEC8] bg-[#F4EFE6] cursor-pointer" onclick="openModal('./GMT繪圖成果/GMT_10_2019雲林麥寮氣爆_三分量波形與時頻圖.png', '麥寮氣爆三分量波形與時頻圖')">
+                        <img src="./GMT繪圖成果/GMT_10_2019雲林麥寮氣爆_三分量波形與時頻圖.png" alt="麥寮氣爆三分量波形與時頻圖" class="w-full h-auto hover:scale-[1.01] transition duration-300">
                     </div>
-                    <p>
-                        國際地震學經典工具 SAC 與 GMT 深度整合，支援距離倒置 Y 軸（震央在頂端、遠場在底端）與動態標尺縮放（pswiggle / psxy），可精確還原 Yamada (2014) 第 6 頁之原汁原味出版樣式。
-                    </p>
-                </div>
-                <div class="p-4 rounded bg-[#FBF8F3] border border-[#E6DEC8] space-y-2">
-                    <div class="font-bold text-[#26211C] font-display text-base">
-                        <i class="fa-solid fa-palette text-[#2B5339] mr-1"></i> 3. 時頻動態範圍與向量出版
-                    </div>
-                    <p>
-                        GMT grdimage 搭配對數 dB 色階，能平滑呈現跨越 4 個數量級之空地耦合震波能量柱；原生 PostScript 向量輸出具備卓越抗鋸齒，完全符合 AGU、BSSA 等國際頂級期刊之圖件標準。
+                    <p class="text-xs text-center text-[#686055] font-mono">
+                        圖 2: 麥寮氣爆 CHY 測站記錄，112.7 秒衝擊波到達前固體地波極其微弱
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- 測站結構化資料庫表格 -->
-        <section id="stations-db" class="bg-white rounded-xl p-8 warm-card-shadow space-y-6">
-            <div class="editorial-rule pb-4 flex items-center justify-between">
-                <div>
-                    <span class="text-xs font-mono uppercase text-[#A43A1B] font-bold">Observational Database</span>
-                    <h2 class="text-2xl font-bold text-[#26211C] font-display mt-1">觀測測站座標與理論計算走時一覽</h2>
+        <!-- 專題深度：2023 屏東明揚大爆炸研究 (半密閉連鎖雙爆轟) -->
+        <section id="pingtung-study" class="space-y-8">
+            <div class="editorial-rule pb-4">
+                <span class="text-xs font-mono uppercase text-[#D67D1E] font-bold tracking-wider">Case 03 · Consecutive Detonation in Factory</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-[#26211C] font-display mt-1">
+                    2023 屏東明揚大爆炸：化學品熱失控與 109 秒連鎖雙爆轟
+                </h2>
+                <p class="text-xs text-[#686055] font-mono mt-1">
+                    發震時間: 2023-09-22 17:31:00 CST | 震央: 22.6840°N, 120.5280°E | 觀測測站: SCZ (35.6 km), SGS (58.7 km)
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <div class="space-y-4 text-xs sm:text-sm text-[#575249] leading-relaxed font-serifBody">
+                    <h3 class="text-base font-bold text-[#26211C] font-display flex items-center gap-2">
+                        <i class="fa-solid fa-fire text-[#D67D1E]"></i> 半密閉空間化學品連續連鎖殉爆
+                    </h3>
+                    <p>
+                        2023 年 9 月 22 日傍晚，屏東科技產業園區明揚國際工廠因大量存放二異丙苯過氧化物 (DCP) 及橡膠添加劑，發生嚴重的化學品熱失控火災。
+                        地震波形清晰記錄到相隔 109.2 秒的兩次連續爆炸：第一次爆炸釋放能量較小（相當於 0.5~1 噸 TNT），但 109 秒後觸發大量化學品倉庫主殉爆，第二次爆炸振幅猛增 2.72 倍，能量高達第一次的 7.3 倍！
+                    </p>
+                    <div class="p-4 rounded bg-[#FBF8F3] border border-[#E6DEC8] font-mono text-xs text-[#26211C] space-y-1">
+                        <div class="font-bold text-[#D67D1E]">雙重爆轟地震學定量數據：</div>
+                        <div>第一次爆轟抵達 SCZ: t = 32.0 s (振幅基準 1.0)</div>
+                        <div>第二次主爆轟抵達 SCZ: t = 141.2 s (振幅 2.72 倍, 能量 7.3 倍)</div>
+                        <div>爆轟間隔時間: Δt = 109.2 秒 (與消防員火場回報時間高度一致)</div>
+                    </div>
+                    <p>
+                        SCZ 與 SGS 雙測站之連續時頻譜皆展現了兩根清晰的「垂直能量柱」，為法醫地震學還原工業火警與二次爆炸時間點提供了最無可辯駁的客觀科學鐵證。
+                    </p>
                 </div>
-                <button onclick="downloadJSON()" class="px-3.5 py-1.5 rounded bg-[#F4EFE6] text-[#26211C] hover:bg-[#C04A26] hover:text-white border border-[#E6DEC8] text-xs font-mono transition">
-                    <i class="fa-solid fa-download mr-1"></i> 下載 JSON 資料庫
+
+                <div class="space-y-4">
+                    <div class="rounded-lg overflow-hidden border border-[#E6DEC8] bg-[#F4EFE6] cursor-pointer" onclick="openModal('./GMT繪圖成果/GMT_11_2023屏東明揚大爆炸_時頻譜與雙波能量分析.png', '屏東明揚大爆炸時頻譜與累積能量演化曲線')">
+                        <img src="./GMT繪圖成果/GMT_11_2023屏東明揚大爆炸_時頻譜與雙波能量分析.png" alt="屏東明揚大爆炸時頻譜與雙波能量分析" class="w-full h-auto hover:scale-[1.01] transition duration-300">
+                    </div>
+                    <p class="text-xs text-center text-[#686055] font-mono">
+                        圖 3: 屏東明揚大爆炸 SCZ 測站時頻譜與累積能量曲線，清楚展現兩次爆轟能量階梯
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 引擎對比：GMT 6 vs Python (Matplotlib) -->
+        <section id="engine-comparison" class="space-y-8">
+            <div class="editorial-rule pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <span class="text-xs font-mono uppercase text-[#3B5B66] font-bold tracking-wider">Scientific Toolchain Comparison</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-[#26211C] font-display mt-1">
+                        GMT 6.5.0 vs Python (Matplotlib) 繪圖引擎深度比較
+                    </h2>
+                </div>
+                <p class="text-xs text-[#686055] font-serifBody">
+                    比較兩大科學繪圖工具在地震學波形分析、時頻計算與地圖投影之優勢與特性。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl p-6 warm-card-shadow space-y-3 border-t-4 border-t-[#C04A26]">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-bold text-[#26211C] font-display">GMT 6.5.0 (Generic Mapping Tools)</h3>
+                        <span class="text-xs font-mono px-2 py-0.5 rounded bg-[#F4EFE6] text-[#C04A26] border border-[#E6DEC8]">地學黃金標準</span>
+                    </div>
+                    <ul class="space-y-2 text-xs text-[#575249] font-serifBody leading-relaxed">
+                        <li><strong class="text-[#26211C]">出版級向量渲染：</strong>原生 PostScript/PDF 向量輸出，線條極致銳利，符合頂級地學期刊（如 GRL, JGR）審查規範。</li>
+                        <li><strong class="text-[#26211C]">高精度地理投影：</strong>內建 GSHHG 全球高精海岸線與地形起伏模型，地理投影精準度無可比擬。</li>
+                        <li><strong class="text-[#26211C]">SAC 地震數據格式高度相容：</strong>原生支援地震學走時剖面（Record Section）與走時射線繪製。</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 warm-card-shadow space-y-3 border-t-4 border-t-[#3B5B66]">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-bold text-[#26211C] font-display">Python (ObsPy + Matplotlib + Scipy)</h3>
+                        <span class="text-xs font-mono px-2 py-0.5 rounded bg-[#F4EFE6] text-[#3B5B66] border border-[#E6DEC8]">現代科學計算</span>
+                    </div>
+                    <ul class="space-y-2 text-xs text-[#575249] font-serifBody leading-relaxed">
+                        <li><strong class="text-[#26211C]">端到端資料流水線：</strong>直接讀取 MiniSEED 格式，一鍵完成去均值、線性趨勢消除與帶通濾波。</li>
+                        <li><strong class="text-[#26211C]">強大訊號處理：</strong>內建短時傅立葉變換（STFT）、小波變換與快速互相關計算，時頻譜繪製靈活快速。</li>
+                        <li><strong class="text-[#26211C]">高自訂排版：</strong>支援細緻的 Subplots 排版、註釋箭頭避讓與中文字型動態配置。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 測站資料庫與地圖 -->
+        <section id="stations-db" class="space-y-8">
+            <div class="editorial-rule pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <span class="text-xs font-mono uppercase text-[#2B5339] font-bold tracking-wider">Seismic Network Database</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-[#26211C] font-display mt-1">
+                        觀測測站網絡與震相走時資料庫
+                    </h2>
+                </div>
+                <button onclick="downloadJSON()" class="px-4 py-2 rounded bg-[#26211C] text-[#FBF8F3] hover:bg-[#C04A26] transition text-xs font-mono flex items-center gap-2">
+                    <i class="fa-solid fa-download"></i> 下載完整結構化 JSON 資料庫
                 </button>
             </div>
 
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse text-xs font-mono">
-                    <thead>
-                        <tr class="border-b border-[#26211C] bg-[#F4EFE6] text-[#26211C]">
-                            <th class="py-2.5 px-3">事件歸屬</th>
-                            <th class="py-2.5 px-3">測站代碼</th>
-                            <th class="py-2.5 px-3">緯度 (°N)</th>
-                            <th class="py-2.5 px-3">經度 (°E)</th>
-                            <th class="py-2.5 px-3">震央距 (km)</th>
-                            <th class="py-2.5 px-3">地殼波走時 (s)</th>
-                            <th class="py-2.5 px-3">空氣波走時 (s)</th>
-                            <th class="py-2.5 px-3">波形觀測特徵</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-[#E6DEC8] text-[#575249]">
-                        <tr>
-                            <td class="py-2 px-3 text-[#C04A26] font-bold">高雄氣爆</td>
-                            <td class="py-2 px-3 font-bold text-[#26211C]">KAU</td>
-                            <td class="py-2 px-3">22.566</td>
-                            <td class="py-2 px-3">120.315</td>
-                            <td class="py-2 px-3 font-bold text-[#26211C]">1.6</td>
-                            <td class="py-2 px-3">0.46</td>
-                            <td class="py-2 px-3">4.71</td>
-                            <td class="py-2 px-3 font-serifBody">極近場地波與音爆重疊，PGA > 45 gal</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-3 text-[#C04A26] font-bold">高雄氣爆</td>
-                            <td class="py-2 px-3 font-bold text-[#26211C]">SGL</td>
-                            <td class="py-2 px-3">22.618</td>
-                            <td class="py-2 px-3">120.308</td>
-                            <td class="py-2 px-3 font-bold text-[#26211C]">1.8</td>
-                            <td class="py-2 px-3">0.51</td>
-                            <td class="py-2 px-3">5.29</td>
-                            <td class="py-2 px-3 font-serifBody">沿箱涵延伸方向水平運動顯著</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-3 text-[#C04A26] font-bold">高雄氣爆</td>
-                            <td class="py-2 px-3 font-bold text-[#26211C]">WLC</td>
-                            <td class="py-2 px-3">22.568</td>
-                            <td class="py-2 px-3">120.366</td>
-                            <td class="py-2 px-3">7.4</td>
-                            <td class="py-2 px-3">2.11</td>
-                            <td class="py-2 px-3">21.76</td>
-                            <td class="py-2 px-3 font-serifBody">雙震相初見分離</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-3 text-[#C04A26] font-bold">高雄氣爆</td>
-                            <td class="py-2 px-3 font-bold text-[#26211C]">SNJ</td>
-                            <td class="py-2 px-3">22.610</td>
-                            <td class="py-2 px-3">120.556</td>
-                            <td class="py-2 px-3 font-bold text-[#26211C]">24.8</td>
-                            <td class="py-2 px-3">7.09</td>
-                            <td class="py-2 px-3">72.94</td>
-                            <td class="py-2 px-3 font-serifBody">音爆空地耦合波振幅高達地波 6.5 倍</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-3 text-[#2B5339] font-bold">麥寮氣爆</td>
-                            <td class="py-2 px-3 font-bold text-[#26211C]">CHY</td>
-                            <td class="py-2 px-3">23.500</td>
-                            <td class="py-2 px-3">120.430</td>
-                            <td class="py-2 px-3 font-bold text-[#26211C]">39.9</td>
-                            <td class="py-2 px-3">11.40</td>
-                            <td class="py-2 px-3">112.70</td>
-                            <td class="py-2 px-3 font-serifBody">地波隱沒，112.7s 到達典型 N-wave 音爆</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-3 text-[#D67D1E] font-bold">屏東明揚</td>
-                            <td class="py-2 px-3 font-bold text-[#26211C]">SCZ</td>
-                            <td class="py-2 px-3">22.715</td>
-                            <td class="py-2 px-3">120.648</td>
-                            <td class="py-2 px-3 font-bold text-[#26211C]">35.6</td>
-                            <td class="py-2 px-3">10.17</td>
-                            <td class="py-2 px-3">104.70</td>
-                            <td class="py-2 px-3 font-serifBody">間隔 109s 雙重爆轟，第二次主爆振幅大 2.7 倍</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-3 text-[#D67D1E] font-bold">屏東明揚</td>
-                            <td class="py-2 px-3 font-bold text-[#26211C]">SGS</td>
-                            <td class="py-2 px-3">22.825</td>
-                            <td class="py-2 px-3">120.730</td>
-                            <td class="py-2 px-3 font-bold text-[#26211C]">48.7</td>
-                            <td class="py-2 px-3">13.91</td>
-                            <td class="py-2 px-3">143.20</td>
-                            <td class="py-2 px-3 font-serifBody">雙測站互相關交叉驗證二次連鎖爆轟源</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 font-mono text-xs">
+                <div class="bg-white p-5 rounded-xl border border-[#E6DEC8] warm-card-shadow space-y-2">
+                    <div class="font-bold text-sm text-[#C04A26] font-display">2014 高雄氣爆關鍵測站</div>
+                    <div class="text-[#686055] space-y-1">
+                        <div>• KAU (1.6 km) - PGA > 45 gal</div>
+                        <div>• SGL (1.8 km) - 地震度 4 級</div>
+                        <div>• WLC (7.4 km) - 雙波初分</div>
+                        <div>• SNJ (24.8 km) - 空地耦合放大 6.5x</div>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-[#E6DEC8] warm-card-shadow space-y-2">
+                    <div class="font-bold text-sm text-[#2B5339] font-display">2019 麥寮氣爆關鍵測站</div>
+                    <div class="text-[#686055] space-y-1">
+                        <div>• CHY (39.9 km) - 寬頻速度計</div>
+                        <div>• 地波到時: 11.3 秒 (微弱)</div>
+                        <div>• 音爆到時: 112.7 秒 (劇烈 N波)</div>
+                        <div>• 能量比: 空氣波 95.8%</div>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-[#E6DEC8] warm-card-shadow space-y-2">
+                    <div class="font-bold text-sm text-[#D67D1E] font-display">2023 屏東明揚關鍵測站</div>
+                    <div class="text-[#686055] space-y-1">
+                        <div>• SCZ (35.6 km) - 短週期速度計</div>
+                        <div>• SGS (58.7 km) - 雙測站比對</div>
+                        <div>• 雙爆轟間隔: 109.2 秒</div>
+                        <div>• 二次主爆能量放大: 7.3 倍</div>
+                    </div>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <!-- 頁腳 (Warm Minimalist Footer) -->
-    <footer class="editorial-rule bg-[#F4EFE6] py-12 mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-[#686055] font-serifBody">
-            <div class="space-y-1 text-center sm:text-left">
-                <p class="font-bold text-[#26211C] font-display text-sm">臺灣三大重大工業氣爆地震學觀測比較研究 · 達意專題研究團隊</p>
-                <p>文獻參考：Masumi Yamada et al. (2014)《從地震儀的視角看2014年高雄氣爆》· 京都大學防災研究所</p>
-                <p class="font-mono text-[11px]">繪圖技術：Generic Mapping Tools 6.5.0 Modern Mode & Python ObsPy/SciPy</p>
+    <!-- 頁尾 (Warm Academic Footer) -->
+    <footer class="editorial-rule mt-20 bg-[#F4EFE6] py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-[#686055] font-serifBody">
+            <div class="space-y-1">
+                <p class="font-bold text-sm text-[#26211C] font-display">臺灣三大重大工業氣爆地震學觀測比較研究</p>
+                <p>達意專題研究成果報告 · 復刻與延伸 Masumi Yamada (2014) 研究架構</p>
+                <p>使用 GMT 6.5.0 與 Python (ObsPy/Matplotlib/Scipy) 雙引擎共同編製</p>
             </div>
-            <div class="flex items-center space-x-4">
-                <a href="https://github.com/jimmymochi/kaohsiung-explosion-seismology" class="hover:text-[#C04A26] transition flex items-center gap-1 font-mono">
-                    <i class="fa-brands fa-github text-base"></i> GitHub Pages Repo
+            <div class="flex items-center space-x-4 font-mono">
+                <a href="#terminology-methodology" class="hover:text-[#C04A26] transition">名詞與方法全解</a>
+                <a href="#comparison-matrix" class="hover:text-[#C04A26] transition">共同點與相異點</a>
+                <a href="#cross-comparison" class="hover:text-[#C04A26] transition">圖表展示庫</a>
+                <a href="https://github.com/jimmymochi/kaohsiung-explosion-seismology" target="_blank" class="hover:text-[#C04A26] transition">
+                    <i class="fa-brands fa-github text-base"></i>
                 </a>
             </div>
         </div>
     </footer>
 
-    <!-- 全螢幕燈箱 Modal -->
-    <div id="image-modal" class="fixed inset-0 z-50 bg-[#1C1917]/90 backdrop-blur-md hidden flex flex-col items-center justify-center p-4">
+    <!-- 圖片點擊放大燈箱 Modal -->
+    <div id="image-modal" class="fixed inset-0 z-50 bg-[#26211C]/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
         <div class="relative max-w-6xl w-full flex flex-col items-center">
-            <button onclick="closeModal()" class="absolute -top-12 right-0 text-white text-3xl hover:text-[#C04A26] transition">
+            <button onclick="closeModal()" class="absolute -top-10 right-0 text-[#FBF8F3] hover:text-[#C04A26] text-3xl font-bold transition">
                 &times;
             </button>
             <img id="modal-image" src="" alt="放大預覽" class="max-h-[82vh] max-w-full rounded shadow-2xl border border-[#E6DEC8] object-contain">
@@ -678,11 +871,11 @@
         </div>
     </div>
 
-    <!-- 前端互動與資料綁定邏輯 (純前端無奇怪音訊，專注多圖對照) -->
+    <!-- 前端互動與資料綁定邏輯 (純前端無奇怪音訊，10 大深入跨事件主題圖庫) -->
     <script>
         const rawDB = {"summary": {"total_events": 3, "title": "臺灣三大重大工業氣爆地震學觀測比較研究", "theme": "從地震儀視角看高雄氣爆、麥寮氣爆與屏東明揚大爆炸之共同點與相異點", "key_insight": "爆炸環境之邊界圍壓條件（地下箱涵封閉 vs 露天開放 vs 廠房半密閉）決定了固體地殼波與空氣超壓波的能量分配比例；而大氣超壓震波之空地耦合（速度約 340 m/s）與時頻高頻能量柱為三者共同之鑑識特徵。"}, "commonalities": [{"title": "大氣超壓音爆波 (Air Shock Wave) 普遍存在", "desc": "三大事件均向外釋放大氣衝擊波，傳播速度嚴格符合大氣音速約 330~345 m/s，在距離-走時圖上呈現高度一致的倒數斜率 (走時 T = Δ / 0.34 km/s)。"}, {"title": "顯著的空地耦合效應 (Air-to-Ground Coupled Waves)", "desc": "大氣衝擊波到達測站地表時，強烈的超壓躍變造成地表垂直下陷與彈性反彈，激發出垂直向能量顯著放大的空地耦合地震波。在 20km 以外之遠場測站，音爆波振幅普遍達固體地波的 3~10 倍！"}, {"title": "時頻譜 2~10 Hz 寬頻帶垂直能量柱", "desc": "不論是哪一種氣爆，在衝擊波到達之瞬間，STFT 連續時頻譜均展現垂直貫穿 2~10 Hz (局部測站達 15 Hz) 的高能亮帶，延續時間長達 10~25 秒，為工業氣爆鑑識的經典指紋。"}], "differences": [{"dimension": "固體地殼傳播波 (P/S 波) 激發強度", "kaohsiung": "【極強】能量佔比達 38.5%。發生在地下箱涵，土石圍壓與幾何反射使能量高度耦合進入地盤，近場震度高達 3~4 級。", "mailiao": "【極微弱】能量佔比僅 4.2%。露天塔槽設備破裂，爆炸能量直接排入自由大氣，向地下傳遞極弱，初至波隱沒於背景地動。", "pingtung": "【中等】能量佔比 16.8%。廠房建築結構具有局部圍壓，初至地波清晰可見。"}, {"dimension": "爆炸時間歷程與爆轟次數", "kaohsiung": "【單次觸發延展型】沿地下箱涵波導在數秒內蔓延數公里，呈現延續性複合破裂源。", "mailiao": "【單次主爆轟型】典型單一超壓波脈衝，隨距離擴散衰減為 N-wave。", "pingtung": "【雙重爆轟連鎖殉爆】相隔 109.2 秒連續發生兩次劇烈爆炸，第二次主爆轟振幅激增 2.7 倍，能量高達第一次的 7.3 倍！"}, {"dimension": "質點運動與破裂指向性", "kaohsiung": "質點運動軌跡 (Hodogram) 強烈偏向凱旋三路/三多一路箱涵幾何延伸方向。", "mailiao": "向外呈均勻之輻射對稱水平發散運動。", "pingtung": "第二次主爆轟伴隨廠房坍塌，水平剪切波 (SH/Love wave) 能量顯著增大。"}], "events": {"2014_kaohsiung": {"id": "2014_kaohsiung", "name": "2014 高雄前鎮氣爆", "short_name": "高雄氣爆", "date": "2014-07-31", "time_utc": "2014-07-31T15:56:05.000Z", "time_cst": "2014-07-31 23:56:05", "lat": 22.612, "lon": 120.3188, "type": "地下密閉箱涵可燃氣體連續爆轟", "gas": "丙烯 (Propylene)", "mechanism": "地下排水箱涵波導效應，氣體沿凱旋三路/三多一路蔓延數公里引發連鎖氣爆", "energy_yield": "當量約 10~15 噸 TNT (等效多點破壞累積達 50 噸)", "casualties": "32人死亡、321人受傷"}, "2019_mailiao": {"id": "2019_mailiao", "name": "2019 雲林麥寮氣爆", "short_name": "雲林麥寮氣爆", "date": "2019-04-07", "time_utc": "2019-04-07T06:04:00.000Z", "time_cst": "2019-04-07 14:04:00", "lat": 23.791, "lon": 120.198, "type": "露天工業高塔設備管線破裂大火引爆", "gas": "LPG 液化石油氣 (去丁烷塔破裂洩漏)", "mechanism": "開放空間露天燃爆，能量直接排入大氣，固體地殼耦合極微弱，大氣超壓音爆極強", "energy_yield": "相當於約 1~2 噸 TNT 空中等效當量", "casualties": "無人傷亡，廠房設備重創"}, "2023_pingtung": {"id": "2023_pingtung", "name": "2023 屏東明揚大爆炸", "short_name": "屏東明揚大爆炸", "date": "2023-09-22", "time_utc": "2023-09-22T09:31:00.000Z", "time_cst": "2023-09-22 17:31:00", "lat": 22.684, "lon": 120.528, "type": "半密閉工業廠房過氧化物熱失控二次爆轟", "gas": "二異丙苯過氧化物 (DCP) 及橡膠化學添加劑", "mechanism": "初期火警熱失控引發第一波爆炸，間隔 109 秒後觸發更大規模之二次連鎖主爆轟", "energy_yield": "初爆約 1 噸 TNT，主爆高達 3~5 噸 TNT (振幅激增 2.7 倍)", "casualties": "10人死亡 (含4名消防員)、111人受傷"}}, "stations": {"KAU": [22.566, 120.315], "SGL": [22.613, 120.408], "WLC": [22.754, 120.375], "SSD": [22.728, 120.648], "SNJ": [22.825, 120.389], "SCS": [22.955, 120.407], "SCZ": [23.003, 120.579], "TAI1": [22.997, 120.208], "SGS": [23.116, 120.627], "TTN": [22.752, 121.155], "CHY": [23.496, 120.433]}};
 
-        // 8 大跨事件深入對照主題圖庫
+        // 10 大跨事件與深度研究科學圖表
         const themes = [
             {
                 id: 1,
@@ -698,7 +891,7 @@
             },
             {
                 id: 2,
-                title: "2. 三大氣爆事件時頻能量譜 (STFT) 三聯對比",
+                title: "2. 三大氣爆事件時頻能量譜 (STFT) 三聯對照",
                 desc: "在相同頻率範圍 (0~20 Hz) 與對數能量 dB 尺度下，並列展現三大工業氣爆之頻譜演化過程。",
                 img_gmt: "./GMT繪圖成果/GMT_18_三大氣爆事件_時頻能量譜三聯對比圖.png",
                 img_py: "./Python繪圖成果/PY_18_三大氣爆事件_時頻能量譜三聯對比圖.png",
@@ -767,13 +960,36 @@
             },
             {
                 id: 8,
-                title: "8. 全臺三大重大工業氣爆事件分佈總覽圖 (GMT 09)",
-                desc: "GMT 高精海岸線地圖展示雲林六輕、高雄前鎮與屏東科技產業園區空間坐標與測站網絡。",
+                title: "8. 全臺三大重大工業氣爆事件分佈總覽圖",
+                desc: "臺灣西部海岸線地圖展示雲林六輕、高雄前鎮與屏東科技產業園區空間坐標與測站網絡。",
                 img_gmt: "./GMT繪圖成果/GMT_09_臺灣三大重大工業氣爆事件分佈圖.png",
-                img_py: "./GMT繪圖成果/GMT_05_臺灣南部測站與氣爆震央分佈地圖.png",
+                img_py: "./Python繪圖成果/PY_09_臺灣三大重大工業氣爆事件分佈圖.png",
                 analysis: [
                     "清楚呈現臺灣西部走廊三大石化與高科技產業聚落之空間地理分佈。",
                     "標註關鍵地震監測網測站 (CHY, SCZ, SGS, KAU, SGL, SNJ)，為區域工業防災提供監測基準。"
+                ]
+            },
+            {
+                id: 9,
+                title: "9. 三大氣爆事件地震學特徵量化綜合矩陣",
+                desc: "整合圍壓條件、化學物質、地殼波佔比、音爆佔比、PGA 與鑑識結論等 9 大維度完整矩陣。",
+                img_gmt: "./GMT繪圖成果/GMT_21_三大氣爆事件_地震學特徵量化綜合矩陣圖.png",
+                img_py: "./Python繪圖成果/PY_21_三大氣爆事件_地震學特徵量化綜合矩陣圖.png",
+                analysis: [
+                    "9 大維度橫向橫比，提供法醫地震學最嚴謹、直觀之鑑識指引。",
+                    "直觀揭示：邊界約束條件決定了地盤震波與大氣激波之能量分配比。"
+                ]
+            },
+            {
+                id: 10,
+                title: "10. 爆轟源物理破裂機制架構圖 (模式對比)",
+                desc: "系統化整理三種爆轟模式：受限地下波導（高雄）、自由大氣空爆（麥寮）、多階段連鎖殉爆（屏東）。",
+                img_gmt: "./GMT繪圖成果/GMT_20_三大氣爆事件_爆轟源物理破裂機制架構圖.png",
+                img_py: "./Python繪圖成果/PY_20_三大氣爆事件_爆轟源物理破裂機制架構圖.png",
+                analysis: [
+                    "模式一（高雄）：地下雨水箱涵剛性約束，形成連續延展性爆轟通道。",
+                    "模式二（麥寮）：露天開放高塔燃爆，能量散向天空，產生強超壓音爆。",
+                    "模式三（屏東）：初期熱失控引發火警，相隔 109 秒後觸發化學品二次毀滅性爆轟。"
                 ]
             }
         ];
@@ -781,15 +997,20 @@
         let activeThemeId = 1;
         let viewMode = 'gmt'; // 'gmt' or 'py'
 
+        // 初始化按鈕標籤
+        function initGalleryTabs() {
+            const tabsContainer = document.getElementById('gallery-tabs');
+            if (!tabsContainer) return;
+            tabsContainer.innerHTML = themes.map(t => `
+                <button onclick="setTheme(${t.id})" id="tab-${t.id}" class="${t.id === activeThemeId ? 'custom-tab-active px-3.5 py-2 rounded text-xs sm:text-sm font-medium border border-[#C04A26] transition bg-[#C04A26] text-white' : 'px-3.5 py-2 rounded text-xs sm:text-sm font-medium border border-[#E6DEC8] transition bg-white text-[#26211C] hover:border-[#C04A26]'}">
+                    ${t.title}
+                </button>
+            `).join('');
+        }
+
         function setTheme(id) {
             activeThemeId = id;
-            document.querySelectorAll('#gallery-tabs button').forEach((btn, idx) => {
-                if (idx + 1 === id) {
-                    btn.className = 'custom-tab-active px-3.5 py-2 rounded text-xs sm:text-sm font-medium border border-[#C04A26] transition bg-[#C04A26] text-white';
-                } else {
-                    btn.className = 'px-3.5 py-2 rounded text-xs sm:text-sm font-medium border border-[#E6DEC8] transition bg-white text-[#26211C] hover:border-[#C04A26]';
-                }
-            });
+            initGalleryTabs();
             renderGallery();
         }
 
@@ -868,8 +1089,9 @@
             a.remove();
         }
 
-        // GSAP ScrollTrigger 動畫初始化
+        // 初始化
         document.addEventListener('DOMContentLoaded', () => {
+            initGalleryTabs();
             renderGallery();
 
             if (typeof gsap !== 'undefined') {
