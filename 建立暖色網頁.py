@@ -1,4 +1,30 @@
-<!DOCTYPE html>
+# -*- coding: utf-8 -*-
+"""
+建立暖色網頁.py
+=============================================================================
+全面落實：
+1. frontend-design：禁止 Inter/Roboto，採用 Fraunces + 思源宋體 (Noto Serif TC)，
+   非對稱現代雜誌排版，溫暖紙本大地色系 (Warm Editorial Paper Style)。
+2. ui-ux-pro-max：高質感學術專題排版、大地色調 (象牙紙白、陶土紅、焦糖琥珀、青泥灰)、
+   三大事件「共同點與相異點」深層剖析對比。
+3. gsap-skills：整合 GSAP 3.12 與 ScrollTrigger，打造頂級絲滑滾動與互動切換動態。
+4. 徹底移除 Web Audio 聲音播放器，將全部焦點放在 20+ 組豐富地震學對比圖表！
+=============================================================================
+"""
+
+import os
+import json
+import shutil
+
+BASE_DIR = r"D:\JIMMY CHEN\達意專題\高雄氣爆"
+JSON_PATH = os.path.join(BASE_DIR, "網頁成果", "氣爆地震資料庫.json")
+
+with open(JSON_PATH, "r", encoding="utf-8") as f:
+    db = json.load(f)
+json_str = json.dumps(db, ensure_ascii=False)
+
+# 讀取模板並生成
+html_code = """<!DOCTYPE html>
 <html lang="zh-TW" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -426,12 +452,12 @@
                     </h3>
                     <p>
                         2014 年 7 月 31 日深夜，高雄前鎮區與苓雅區因華運輸送之丙烯管線破洞外洩，高揮發性丙烯氣體沿著市區地下雨水下水道箱涵蔓延數公里。
-                        由於排水箱涵為半密閉且深埋於土層中的剛性結構，氣爆發生時受到土石巨大圍壓限制，爆炸釋放的壓力波以極高效率轉化為地殼固體傳播波（P 波與 S 波，傳播速度約 $3.5	ext{ km/s}$）。
+                        由於排水箱涵為半密閉且深埋於土層中的剛性結構，氣爆發生時受到土石巨大圍壓限制，爆炸釋放的壓力波以極高效率轉化為地殼固體傳播波（P 波與 S 波，傳播速度約 $3.5\text{ km/s}$）。
                     </p>
                     <div class="p-4 rounded bg-[#FBF8F3] border border-[#E6DEC8] font-mono text-xs text-[#26211C] space-y-1">
                         <div class="font-bold text-[#C04A26]">Masumi Yamada (2014) 雙震相方程：</div>
-                        <div>1. 地殼固體波走時: $T_{	ext{ground}} = \Delta / 3.52	ext{ km/s}$</div>
-                        <div>2. 大氣音爆波走時: $T_{	ext{air}} = \Delta / 0.342	ext{ km/s}$</div>
+                        <div>1. 地殼固體波走時: $T_{\text{ground}} = \Delta / 3.52\text{ km/s}$</div>
+                        <div>2. 大氣音爆波走時: $T_{\text{air}} = \Delta / 0.342\text{ km/s}$</div>
                     </div>
                     <p>
                         在近場測站如 KAU (1.6 km) 與 SGL (1.8 km)，地動加速度峰值 (PGA) 超過 45 gal（達中央氣象署震度 4 級）。
@@ -680,7 +706,7 @@
 
     <!-- 前端互動與資料綁定邏輯 (純前端無奇怪音訊，專注多圖對照) -->
     <script>
-        const rawDB = {"summary": {"total_events": 3, "title": "臺灣三大重大工業氣爆地震學觀測比較研究", "theme": "從地震儀視角看高雄氣爆、麥寮氣爆與屏東明揚大爆炸之共同點與相異點", "key_insight": "爆炸環境之邊界圍壓條件（地下箱涵封閉 vs 露天開放 vs 廠房半密閉）決定了固體地殼波與空氣超壓波的能量分配比例；而大氣超壓震波之空地耦合（速度約 340 m/s）與時頻高頻能量柱為三者共同之鑑識特徵。"}, "commonalities": [{"title": "大氣超壓音爆波 (Air Shock Wave) 普遍存在", "desc": "三大事件均向外釋放大氣衝擊波，傳播速度嚴格符合大氣音速約 330~345 m/s，在距離-走時圖上呈現高度一致的倒數斜率 (走時 T = Δ / 0.34 km/s)。"}, {"title": "顯著的空地耦合效應 (Air-to-Ground Coupled Waves)", "desc": "大氣衝擊波到達測站地表時，強烈的超壓躍變造成地表垂直下陷與彈性反彈，激發出垂直向能量顯著放大的空地耦合地震波。在 20km 以外之遠場測站，音爆波振幅普遍達固體地波的 3~10 倍！"}, {"title": "時頻譜 2~10 Hz 寬頻帶垂直能量柱", "desc": "不論是哪一種氣爆，在衝擊波到達之瞬間，STFT 連續時頻譜均展現垂直貫穿 2~10 Hz (局部測站達 15 Hz) 的高能亮帶，延續時間長達 10~25 秒，為工業氣爆鑑識的經典指紋。"}], "differences": [{"dimension": "固體地殼傳播波 (P/S 波) 激發強度", "kaohsiung": "【極強】能量佔比達 38.5%。發生在地下箱涵，土石圍壓與幾何反射使能量高度耦合進入地盤，近場震度高達 3~4 級。", "mailiao": "【極微弱】能量佔比僅 4.2%。露天塔槽設備破裂，爆炸能量直接排入自由大氣，向地下傳遞極弱，初至波隱沒於背景地動。", "pingtung": "【中等】能量佔比 16.8%。廠房建築結構具有局部圍壓，初至地波清晰可見。"}, {"dimension": "爆炸時間歷程與爆轟次數", "kaohsiung": "【單次觸發延展型】沿地下箱涵波導在數秒內蔓延數公里，呈現延續性複合破裂源。", "mailiao": "【單次主爆轟型】典型單一超壓波脈衝，隨距離擴散衰減為 N-wave。", "pingtung": "【雙重爆轟連鎖殉爆】相隔 109.2 秒連續發生兩次劇烈爆炸，第二次主爆轟振幅激增 2.7 倍，能量高達第一次的 7.3 倍！"}, {"dimension": "質點運動與破裂指向性", "kaohsiung": "質點運動軌跡 (Hodogram) 強烈偏向凱旋三路/三多一路箱涵幾何延伸方向。", "mailiao": "向外呈均勻之輻射對稱水平發散運動。", "pingtung": "第二次主爆轟伴隨廠房坍塌，水平剪切波 (SH/Love wave) 能量顯著增大。"}], "events": {"2014_kaohsiung": {"id": "2014_kaohsiung", "name": "2014 高雄前鎮氣爆", "short_name": "高雄氣爆", "date": "2014-07-31", "time_utc": "2014-07-31T15:56:05.000Z", "time_cst": "2014-07-31 23:56:05", "lat": 22.612, "lon": 120.3188, "type": "地下密閉箱涵可燃氣體連續爆轟", "gas": "丙烯 (Propylene)", "mechanism": "地下排水箱涵波導效應，氣體沿凱旋三路/三多一路蔓延數公里引發連鎖氣爆", "energy_yield": "當量約 10~15 噸 TNT (等效多點破壞累積達 50 噸)", "casualties": "32人死亡、321人受傷"}, "2019_mailiao": {"id": "2019_mailiao", "name": "2019 雲林麥寮氣爆", "short_name": "雲林麥寮氣爆", "date": "2019-04-07", "time_utc": "2019-04-07T06:04:00.000Z", "time_cst": "2019-04-07 14:04:00", "lat": 23.791, "lon": 120.198, "type": "露天工業高塔設備管線破裂大火引爆", "gas": "LPG 液化石油氣 (去丁烷塔破裂洩漏)", "mechanism": "開放空間露天燃爆，能量直接排入大氣，固體地殼耦合極微弱，大氣超壓音爆極強", "energy_yield": "相當於約 1~2 噸 TNT 空中等效當量", "casualties": "無人傷亡，廠房設備重創"}, "2023_pingtung": {"id": "2023_pingtung", "name": "2023 屏東明揚大爆炸", "short_name": "屏東明揚大爆炸", "date": "2023-09-22", "time_utc": "2023-09-22T09:31:00.000Z", "time_cst": "2023-09-22 17:31:00", "lat": 22.684, "lon": 120.528, "type": "半密閉工業廠房過氧化物熱失控二次爆轟", "gas": "二異丙苯過氧化物 (DCP) 及橡膠化學添加劑", "mechanism": "初期火警熱失控引發第一波爆炸，間隔 109 秒後觸發更大規模之二次連鎖主爆轟", "energy_yield": "初爆約 1 噸 TNT，主爆高達 3~5 噸 TNT (振幅激增 2.7 倍)", "casualties": "10人死亡 (含4名消防員)、111人受傷"}}, "stations": {"KAU": [22.566, 120.315], "SGL": [22.613, 120.408], "WLC": [22.754, 120.375], "SSD": [22.728, 120.648], "SNJ": [22.825, 120.389], "SCS": [22.955, 120.407], "SCZ": [23.003, 120.579], "TAI1": [22.997, 120.208], "SGS": [23.116, 120.627], "TTN": [22.752, 121.155], "CHY": [23.496, 120.433]}};
+        const rawDB = __JSON_DATA__;
 
         // 8 大跨事件深入對照主題圖庫
         const themes = [
@@ -892,3 +918,18 @@
     </script>
 </body>
 </html>
+"""
+
+html_final = html_code.replace("__JSON_DATA__", json_str)
+
+# 寫入目標檔案
+target_html = os.path.join(BASE_DIR, "index.html")
+with open(target_html, "w", encoding="utf-8") as f:
+    f.write(html_final)
+print(f"[成功更新] {target_html}")
+
+# 同步備份至 網頁成果
+web_backup = os.path.join(BASE_DIR, "網頁成果", "index.html")
+shutil.copyfile(target_html, web_backup)
+print(f"[同步備份] {web_backup}")
+
